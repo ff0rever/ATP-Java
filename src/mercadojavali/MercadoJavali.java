@@ -63,19 +63,19 @@ public class MercadoJavali {
 	}
         private boolean intValido(String s) {
 		try {
-			Integer.parseInt(s); // M�todo est�tico, que tenta tranformar uma string em inteiro
+			Integer.parseInt(s); 
 			return true;
-		} catch (NumberFormatException e) { // N�o conseguiu tranformar em inteiro e gera erro
+		} catch (NumberFormatException e) { 
 			return false;
 		}
 	}
         
-           public int retornaInteiro(String entrada) { // retorna um valor inteiro
+           public int retornaInteiro(String entrada) { 
 		int numInt;
 
-		//Enquanto n�o for poss�vel converter o valor de entrada para inteiro, permanece no loop
+		
 		while (!this.intValido(entrada)) {
-			entrada = JOptionPane.showInputDialog(null, "Valor incorreto!\n\nDigite um n�mero inteiro.");
+			entrada = JOptionPane.showInputDialog(null, "Valor incorreto!\n\nDigite um número inteiro.");
 		}
 		return Integer.parseInt(entrada);
 	}
@@ -88,7 +88,7 @@ public class MercadoJavali {
 			for (int i=0; i < produtos.size(); i++)
 				outputStream.writeObject(produtos.get(i));
 		} catch (FileNotFoundException ex) {
-			JOptionPane.showMessageDialog(null,"Imposs�vel criar arquivo!");
+			JOptionPane.showMessageDialog(null,"Impossível criar arquivo!");
 			ex.printStackTrace();
 		} catch (IOException ex) {
 			ex.printStackTrace();
@@ -214,7 +214,7 @@ public class MercadoJavali {
 				JOptionPane.showMessageDialog(null,"Dados RECUPERADOS com sucesso!");
 				break;
 			case 9:
-				JOptionPane.showMessageDialog(null,"Fim do aplicativo MercadoJavali");
+				JOptionPane.showMessageDialog(null,"Fim do aplicativo Mercado Javali");
 				break;
 			}
 		} while (opc1 != 9);
